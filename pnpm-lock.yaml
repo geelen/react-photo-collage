@@ -12,6 +12,7 @@ specifiers:
   html-webpack-plugin: ^3.2.0
   prettier: ^1.18.2
   react-images: ^1.0.0
+  react-responsive-carousel: ^3.2.22
   source-map-loader: ^0.2.4
   styled-components: ^4.1.3
   typescript: ^3.3.3333
@@ -21,6 +22,7 @@ specifiers:
 
 dependencies:
   react-images: 1.1.7
+  react-responsive-carousel: 3.2.22
 
 devDependencies:
   awesome-typescript-loader: 5.2.1_typescript@3.9.10
@@ -1024,6 +1026,10 @@ packages:
       isobject: 3.0.1
       static-extend: 0.1.2
     dev: true
+
+  /classnames/2.3.1:
+    resolution: {integrity: sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==}
+    dev: false
 
   /clean-css/4.2.4:
     resolution: {integrity: sha512-EJUDT7nDVFDvaQgAo2G/PJvxmp1o/c6iXLbswsBbUFXi1Nr+AjA2cKmfbKDMjMvzEe75g3P6JkaDDAKk96A85A==}
@@ -4212,6 +4218,13 @@ packages:
       '@babel/runtime': 7.17.2
     dev: false
 
+  /react-easy-swipe/0.0.21:
+    resolution: {integrity: sha512-OeR2jAxdoqUMHIn/nS9fgreI5hSpgGoL5ezdal4+oO7YSSgJR8ga+PkYGJrSrJ9MKlPcQjMQXnketrD7WNmNsg==}
+    engines: {node: '>= 6'}
+    dependencies:
+      prop-types: 15.8.1
+    dev: false
+
   /react-focus-lock/2.8.1:
     resolution: {integrity: sha512-4kb9I7JIiBm0EJ+CsIBQ+T1t5qtmwPRbFGYFQ0t2q2qIpbFbYTHDjnjJVFB7oMBtXityEOQehblJPjqSIf3Amg==}
     peerDependencies:
@@ -4326,6 +4339,14 @@ packages:
       tslib: 1.14.1
       use-callback-ref: 1.2.5
       use-sidecar: 1.0.5
+    dev: false
+
+  /react-responsive-carousel/3.2.22:
+    resolution: {integrity: sha512-/r7dsIaN+l417IYIS0Fr7Z5VlpK3KYnTIIsdVCWSqtuJRIZNM+qdBIA4RIbzQtuW/ZBTnQanBecblCxg0HCqLQ==}
+    dependencies:
+      classnames: 2.3.1
+      prop-types: 15.8.1
+      react-easy-swipe: 0.0.21
     dev: false
 
   /react-style-singleton/2.1.1:
