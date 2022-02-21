@@ -26,7 +26,7 @@ interface ReactPhotoCollageContainerProps {
     width?: string;
     height?: Array<string>;
     layout: Array<number>;
-    photos: Array<{ source: string }>;
+    photos: Array<{ thumbnail: string, source: string }>;
     showNumOfRemainingPhotos?: boolean
 }
 const checkProps = (props: ReactPhotoCollageContainerProps) => {
