@@ -88,7 +88,7 @@ const RowPhotos: React.FC<RowPhotosProps> = (props) => {
                                         </React.Fragment>
                                     ) : null
                             }
-                            <SC.PhotoThumb thumb={data.thumbnail || data.source}></SC.PhotoThumb>
+                            <SC.PhotoThumb data-photo-filename={data.filename} thumb={data.thumbnail || data.source}></SC.PhotoThumb>
                         </SC.PhotoGrid>
                     )
                 })

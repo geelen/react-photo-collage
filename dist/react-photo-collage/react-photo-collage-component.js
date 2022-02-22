@@ -66,7 +66,7 @@ const RowPhotos = (props) => {
                     React.createElement(SC.PhotoMask, null),
                     React.createElement(SC.ViewMore, null,
                         React.createElement(SC.NumOfRemaining, null, remainingNum)))) : null,
-            React.createElement(SC.PhotoThumb, { thumb: data.thumbnail || data.source })));
+            React.createElement(SC.PhotoThumb, { "data-photo-filename": data.filename, thumb: data.thumbnail || data.source })));
     })));
 };
 export const ReactPhotoCollageComponent = React.memo((props) => {
