@@ -10,13 +10,6 @@ import Carousel, { Modal, ModalGateway } from 'react-images'
 
 import { ReactPhotoCollageComponent } from './react-photo-collage-component'
 import styled from 'styled-components'
-const ModalStyles = styled.div`
-  .react-images__view-image {
-    max-width: 95%;
-    max-height: 95vh;
-    margin-top: 5vh;
-  }
-`
 const createPhotoIds = (photos) => {
   return photos.map((data, i) => {
     return { ...data, id: i }
@@ -94,7 +87,7 @@ const ReactPhotoCollageContainer: React.FC<ReactPhotoCollageContainerProps> = (
 
   if (allowRender) {
     return (
-      <React.Fragment>
+      <>
         <ReactPhotoCollageComponent
           width={width}
           height={height}
@@ -108,13 +101,11 @@ const ReactPhotoCollageContainer: React.FC<ReactPhotoCollageContainerProps> = (
         <ModalGateway>
           {viewerIsOpen ? (
             <Modal onClose={closeLightbox}>
-              <ModalStyles>
-                <Carousel views={photos} currentIndex={currentImage} />
-              </ModalStyles>
+              <Carousel views={photos} currentIndex={currentImage} />
             </Modal>
           ) : null}
         </ModalGateway>
-      </React.Fragment>
+      </>
     )
   }
 

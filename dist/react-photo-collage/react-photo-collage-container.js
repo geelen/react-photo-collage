@@ -7,14 +7,6 @@ import Carousel, { Modal, ModalGateway } from 'react-images';
 //   ))}
 // </Carousel>
 import { ReactPhotoCollageComponent } from './react-photo-collage-component';
-import styled from 'styled-components';
-const ModalStyles = styled.div `
-  .react-images__view-image {
-    max-width: 95%;
-    max-height: 95vh;
-    margin-top: 5vh;
-  }
-`;
 const createPhotoIds = (photos) => {
     return photos.map((data, i) => {
         return { ...data, id: i };
@@ -74,8 +66,7 @@ const ReactPhotoCollageContainer = (props) => {
         return (React.createElement(React.Fragment, null,
             React.createElement(ReactPhotoCollageComponent, { width: width, height: height, layout: layout, layoutPhotoMaps: layoutPhotoMaps, layoutNum: layoutNum, remainingNum: remainingNum, showNumOfRemainingPhotos: showNumOfRemainingPhotos, openLightbox: openLightbox }),
             React.createElement(ModalGateway, null, viewerIsOpen ? (React.createElement(Modal, { onClose: closeLightbox },
-                React.createElement(ModalStyles, null,
-                    React.createElement(Carousel, { views: photos, currentIndex: currentImage })))) : null)));
+                React.createElement(Carousel, { views: photos, currentIndex: currentImage }))) : null)));
     }
     return null;
 };
