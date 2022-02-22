@@ -66,7 +66,7 @@ const ReactPhotoCollageContainer = (props) => {
         return (React.createElement(React.Fragment, null,
             React.createElement(ReactPhotoCollageComponent, { width: width, height: height, layout: layout, layoutPhotoMaps: layoutPhotoMaps, layoutNum: layoutNum, remainingNum: remainingNum, showNumOfRemainingPhotos: showNumOfRemainingPhotos, openLightbox: openLightbox }),
             React.createElement(ModalGateway, null, viewerIsOpen ? (React.createElement(Modal, { onClose: closeLightbox },
-                React.createElement(Carousel, { views: photos, currentIndex: currentImage }))) : null)));
+                React.createElement(Carousel, { hideControlsWhenIdle: 1000, views: photos, currentIndex: currentImage }))) : null)));
     }
     return null;
 };

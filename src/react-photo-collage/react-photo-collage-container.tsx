@@ -101,7 +101,7 @@ const ReactPhotoCollageContainer: React.FC<ReactPhotoCollageContainerProps> = (
         <ModalGateway>
           {viewerIsOpen ? (
             <Modal onClose={closeLightbox}>
-              <Carousel views={photos} currentIndex={currentImage} />
+              <Carousel hideControlsWhenIdle={1000} views={photos} currentIndex={currentImage} />
             </Modal>
           ) : null}
         </ModalGateway>
